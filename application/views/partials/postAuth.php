@@ -1,0 +1,1 @@
+<a class="nav-link" href="<?php echo base_url('index.php/Home/postContent');?>"><i class="fa fa-plus-square"></i>&nbsp;Add New Post</a>
