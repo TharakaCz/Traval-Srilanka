@@ -31,10 +31,13 @@ class Login extends CI_Controller
                   'email' =>$result->email,
                   'address'=>$result->address,
                   'password'=>$result->password,
-                  'active'=>true
+                  'active'=>true,
+                  'role'=>$result->role
               );
 
               $this->session->set_userdata($user_data);
+
+
                 redirect('HOME/index');
             }else{
                 $this->session->set_flashdata('msg','Login Faild Try Again');
