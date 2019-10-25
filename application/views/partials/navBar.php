@@ -33,6 +33,12 @@
                 }?>
             </li>
             <li class="nav-item active">
+                <?php $role= $this->session->userdata('role');
+                if ($role == 'admin' ){
+                    include 'adminDashboardAuth.php';
+                }?>
+            </li>
+            <li class="nav-item active">
                 <?php $status= $this->session->userdata('active');
                 if ($status != false){
                     include 'auth.php';

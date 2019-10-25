@@ -25,17 +25,14 @@ class Home extends CI_Controller {
 	public function login(){
 	    $this->load->view('login');
     }
-
     public function  registor(){
 	    $this->load->view('registor');
     }
-
-
     public function about(){
 	    $this->load->view('aboutUs');
     }
-
     public function postContent(){
 	    $this->load->view('postContent');
     }
+
 }

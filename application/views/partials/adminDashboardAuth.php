@@ -1,0 +1,1 @@
+<a class="nav-link" href="<?php echo base_url('index.php/Admin/admin_panel');?>" id="adminpanel">Admin Panel</a>

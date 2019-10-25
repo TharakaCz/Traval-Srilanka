@@ -17,6 +17,7 @@ class User_Modle extends CI_Model
             'address' => $this->input->post('address',TRUE),
             'email' => $this->input->post('email',TRUE),
             'password' => sha1($this->input->post('password',TRUE)),
+            'role' => $role ='user'
         );
 
         $this->db->insert('user',$data);
