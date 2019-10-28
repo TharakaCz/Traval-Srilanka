@@ -1,0 +1,1 @@
+<a class="nav-link" href="<?php echo base_url('index.php/Content/user_status');?>"><i class="fa fa-file"></i>&nbsp;Your Post's</a>
