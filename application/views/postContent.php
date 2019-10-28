@@ -1,6 +1,9 @@
 <?php include 'partials/header.php'?>
 <?php include 'partials/navBar.php'?>
 <div class="col-md-6 mx-auto" id="postContent">
+    <?php if ($this->session->flashdata('msg')){
+        echo "<h3>".$this->session->flashdata('msg')."</h3>";
+    }?>
     <?php echo validation_errors();?>
     <?php echo form_open_multipart('Content/saveContent')?>
         <div class="form-group">

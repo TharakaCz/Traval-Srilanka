@@ -34,8 +34,11 @@ class User_Modle extends CI_Model
 
         if ($respond->num_rows()==1){
             return $respond->row(0);
+            die();
         }else{
             echo false;
+            die();
         }
     }
+
 }

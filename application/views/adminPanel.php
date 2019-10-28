@@ -10,6 +10,9 @@
         <div class="col-sm">
             <h3>System Users</h3>
             <hr>
+            <?php if ($this->session->flashdata('msg')){
+                    echo "<h3>".$this->session->flashdata('msg')."</h3>";
+            }?>
             <table class="table" id="table" >
                 <thead class="thead-dark">
                 <tr>
@@ -20,7 +23,8 @@
                     <th scope="col">Email</th>
                     <th scope="col">Password</th>
                     <th scope="col">Role</th>
-                    <th scope="col">Action</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -38,7 +42,8 @@
                                     <td><?php echo $row->email;?></td>
                                     <td><?php echo $row->password;?></td>
                                     <td><?php echo $row->role;?></td>
-                                    <td><?php echo "<a href='#'>edit</a>"?></td>
+                                    <td><a href='<?php echo base_url("index.php/Admin/edit_user/{$row->pid}");?>'><i class="fa fa-edit"></i>&nbsp;edit</a></td>
+                                    <td><a href='<?php echo base_url("index.php/Admin/delete_user/{$row->pid}");?>'><i class="fa fa-trash"></i>&nbsp;delete</a></td>
                                 </tr>
                         <?php
                             }

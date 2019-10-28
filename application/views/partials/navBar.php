@@ -7,10 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo base_url('index.php/Home/index')?>">Home</a>
+                <a class="nav-link" href="<?php echo base_url('index.php/Home/index');?>">Home</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo base_url('index.php/Home/about')?>">About Us</a>
+                <a class="nav-link" href="<?php echo base_url('index.php/Home/about');?>">About Us</a>
             </li>
         </ul>
 
@@ -30,6 +30,12 @@
                 <?php $status= $this->session->userdata('active');
                 if ($status != false){
                     include 'postAuth.php';
+                }?>
+            </li>
+            <li class="nav-item active">
+                <?php $status= $this->session->userdata('active');
+                if ($status != false){
+                    include 'userPostAuth.php';
                 }?>
             </li>
             <li class="nav-item active">

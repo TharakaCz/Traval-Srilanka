@@ -11,7 +11,7 @@ class Content_Model extends CI_Model
 
     public function contentModel(){
 
-        $config['upload_path'] = './uploads/images';
+        $config['upload_path'] = './uploads/images/';
         $config['allowed_types'] = 'gif|jpg|png';
         $config['encrypt_name'] = true;
         $this->load->library('upload',$config);
@@ -28,6 +28,21 @@ class Content_Model extends CI_Model
 
         ];
 
-        $this->db->insert('post',$content);
+        $responce = $this->db->insert('post',$content);
+        return $responce;
+    }
+
+    public function getContents(){
+
+        $pid = $this->session->userdata('id');
+        $this->db->where('user_id',$pid);
+        $responce = $this->db->get('post');
+
+        return $responce;
+
+       /* $path =  $config['upload_path'] = './uploads/images/';*/
+
+
+
     }
 }

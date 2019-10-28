@@ -24,7 +24,7 @@
             margin-right: 10%;
             position: relative;
         }
-        #footer{
+       /* #footer{
             position: absolute;
             color: white;
             width: 98.4%;
@@ -101,7 +101,7 @@
             #footer{
                 width: 90%;
             }
-        }
+        }*/
     #postContent{
         margin-top: 10%;
     }
