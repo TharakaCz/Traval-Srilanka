@@ -10,7 +10,7 @@
                 <a class="nav-link" href="<?php echo base_url('index.php/Home/index');?>">Home</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo base_url('index.php/Home/about');?>">About Us</a>
+                <a class="nav-link" href="#aboutus">About Us</a>
             </li>
         </ul>
 

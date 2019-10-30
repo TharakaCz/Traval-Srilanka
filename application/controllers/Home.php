@@ -20,7 +20,12 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('home');
+	    $this->load->model('Home_Model');
+	    $responce['data']=$this->Home_Model->technology();
+	    $this->load->model('Comment_Model');
+        $responce['com'] =$this->Comment_Model->getComment();
+
+		$this->load->view('home',$responce);
 	}
 	public function login(){
 	    $this->load->view('login');
