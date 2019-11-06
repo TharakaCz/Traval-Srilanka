@@ -23,8 +23,20 @@ class Comment_Model extends CI_Model
     }
 
     public function getComment(){
-        $query = $this->db->query('Select * from comment');
 
+        $query = $this->db->query('Select * from comment');
+        return $query;
+    }
+
+    public function getCommentDesc(){
+
+        $query = $this->db->query('Select * from comment order by pid desc');
+        return $query;
+    }
+
+    public function deleteComment($pid){
+
+        $query = $this->db->delete('comment', array('pid' => $pid));
         return $query;
     }
 }

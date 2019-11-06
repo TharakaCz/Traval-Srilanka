@@ -32,4 +32,18 @@ class Reports extends CI_Controller
         }
 
     }
+
+    public function delete($pid){
+
+        $this->load->model('Report_Model');
+        $result =$this->Report_Model->deleteReport($pid);
+
+        if ($result== 1){
+            $this->session->set_flashdata('rmsg','Report Delete Succsessfully');
+            redirect('Admin/admin_panel');
+        }else{
+            $this->session->set_flashdata('rerror','System Error Occurd !');
+            redirect('Admin/admin_panel');
+        }
+    }
 }

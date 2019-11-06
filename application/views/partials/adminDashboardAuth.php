@@ -1,1 +1,1 @@
-<a class="nav-link" href="<?php echo base_url('index.php/Admin/admin_panel');?>" id="adminpanel">Admin Panel</a>
+<a class="nav-link" href="<?php echo base_url('index.php/Admin/admin_panel');?>" id="adminpanel"><i class="fa fa-user-secret"></i>&nbsp;Admin Panel</a>

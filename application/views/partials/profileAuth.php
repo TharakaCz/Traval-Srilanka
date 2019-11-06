@@ -1,1 +1,1 @@
-<a class="nav-link" href="<?php echo base_url('index.php/Profile/userProfile');?>">Profile</a>
+<a class="nav-link" href="<?php echo base_url('index.php/Profile/userProfile');?>"><i class="fa fa-id-card"></i>&nbsp;Profile</a>

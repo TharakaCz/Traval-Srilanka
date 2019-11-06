@@ -21,4 +21,18 @@ class Comment extends CI_Controller
         }
     }
 
+    public function delete($pid){
+
+        $this->load->model('Comment_Model');
+        $result =$this->Comment_Model->deleteComment();
+
+        if ($result == 1){
+         $this->session->set_flashdata('com','Comment Delete Succsess ');
+         redirect('Admin/admin_panel');
+        }else{
+            $this->session->set_flashdata('comerror','System Error Occurd !');
+            redirect('Admin/admin_panel');
+        }
+    }
+
 }

@@ -13,7 +13,13 @@ class Admin extends CI_Controller
         $this->load->model('Admin_Model');
         $result['data'] = $this->Admin_Model->getUsers();
 
-        $this->load->view('adminPanel',$result);
+        $this->load->model('Report_Model');
+        $result['reports']=$this->Report_Model->getAllReports();
+
+        $this->load->model('Comment_Model');
+        $result['comment']=$this->Comment_Model->getCommentDesc();
+
+       $this->load->view('adminPanel',$result);
 
     }
 

@@ -14,8 +14,15 @@ class Profile extends CI_Controller
     }
 
     public function editUser(){
+        $this->load->model('User_Modle');
+        $responce =$this->User_Modle->updateUser();
 
-        $fname = $this->input->post('fname');
-        print_r($fname);
+        if ($responce == 1){
+            $this->session->set_flashdata('edone','Profile Update Succsessfully');
+            redirect('Profile/userProfile');
+        }else{
+            $this->session->set_flashdata('eerror','System Error Occurd !');
+            redirect('Profile/userProfile');
+        }
     }
 }
