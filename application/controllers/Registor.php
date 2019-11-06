@@ -13,9 +13,9 @@ class Registor extends CI_Controller
         $this->form_validation->set_rules('fname', 'Frist Name', 'required');
         $this->form_validation->set_rules('lname', 'Last Name', 'required');
         $this->form_validation->set_rules('address', 'Address', 'required');
-        $this->form_validation->set_rules('password', 'Password', 'required');
-        $this->form_validation->set_rules('confirmPassword', 'Password Confirmation', 'required');
-        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('Password', 'trim|required|min_length[8]');
+        $this->form_validation->set_rules('confirmPassword','Password Confirmation', 'trim|required|matches[password]');
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[user.email]');
 
         if ($this->form_validation->run() == FALSE)
         {

@@ -41,4 +41,25 @@ class User_Modle extends CI_Model
         }
     }
 
+    public function userCount(){
+
+        $query = $this->db->query('SELECT * FROM user');
+
+        return $query->num_rows();
+
+    }
+
+    public function updateUser(){
+
+        $data = array(
+            'frist_name'=>$this->input->post('fname'),
+            'last_name'=>$this->input->post('lname'),
+            'address'=>$this->input->post('address'),
+            'email'=>$this->input->post('email')
+        );
+        $this->db->where('pid',$this->session->userdata('id'));
+        $responce = $this->db->update('user',$data);
+
+       return $responce;
+    }
 }

@@ -22,4 +22,16 @@ class Report_Model extends CI_Model
 
         return $result;
     }
+
+    public function getAllReports(){
+
+        $query = $this->db->query('SELECT * FROM report order by date desc');
+        return $query;
+    }
+
+    public function deleteReport($pid){
+
+        $query = $this->db->delete('report', array('pid' => $pid));
+        return $query;
+    }
 }

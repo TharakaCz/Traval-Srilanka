@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">Travel-Srilanka</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -7,10 +7,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo base_url('index.php/Home/index');?>">Home</a>
+                <a class="nav-link" href="<?php echo base_url('index.php/Home/index');?>"><i class="fa fa-home"></i>&nbsp;Home</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#aboutus">About Us</a>
+                <a class="nav-link" href="#aboutus"><i class="fa fa-user"></i>&nbsp;About Us</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="<?php echo base_url('index.php/Home/travelPlaces')?>"><i class="fa fa-map-marker"></i>&nbsp;Traveling Places</a>
             </li>
         </ul>
 
@@ -62,4 +65,4 @@
             </li>
         </ul>
     </div>
-</nav>
+</nav><br><br>

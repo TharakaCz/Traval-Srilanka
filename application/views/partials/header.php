@@ -220,6 +220,7 @@
         .slick-arrow.slick-hidden {
             display: none;
         }
+
     </style>
 </head>
 <body>

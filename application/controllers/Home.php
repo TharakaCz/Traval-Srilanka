@@ -24,6 +24,10 @@ class Home extends CI_Controller {
 	    $responce['data']=$this->Home_Model->technology();
 	    $this->load->model('Comment_Model');
         $responce['com'] =$this->Comment_Model->getComment();
+        $this->load->model('User_Modle');
+        $responce['count']=$this->User_Modle->userCount();
+        $this->load->model('Content_Model');
+       $responce['content']=$this->Content_Model->getContentConut();
 
 		$this->load->view('home',$responce);
 	}
@@ -37,7 +41,19 @@ class Home extends CI_Controller {
 	    $this->load->view('aboutUs');
     }
     public function postContent(){
-	    $this->load->view('postContent');
+        $this->load->model('District_Model');
+        $district['data']=$this->District_Model->getAllDistrict();
+	    $this->load->view('postContent',$district);
+    }
+
+    public function travelPlaces(){
+
+            $this->load->model('District_Model');
+            $result['data']=$this->District_Model->getAllDistrict();
+            $this->load->model('Content_Model');
+            $result['post']=$this->Content_Model->getAllPost();
+            $this->load->view('travelPlaces',$result);
+
     }
 
 

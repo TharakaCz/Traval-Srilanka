@@ -8,20 +8,25 @@
             <h4 class="text-center" style="font-weight: bold">We Are Think Twice Technology's</h4><br><br>
         <div class="row justify-content-center">
             <div class="text-center">
+                <img src="../../assest/images/service/setting-goals-higher1.gif" style="width: 17rem">
+                <br>
+                <br>
                 <h5 style="font-weight: bold">Our Gole</h5>
                 <p>Provide Good Traval Details Our Client</p>
             </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <div class="text-center">
+                <img src="../../assest/images/service/our-goal-img.png" style="width: 15rem">
                 <h5 style="font-weight: bold">Our Target</h5>
                 <p>Best Traval Website In Local Traveler's and Froign Travelers</p>
             </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <div class="text-center">
+                <img src="../../assest/images/service/vission.png" style="width: 14rem">
                 <h5 style="font-weight: bold">Our Vision</h5>
                 <p>Shair Location and Provide Help Travelers</p>
             </div>
         </div>
     </div>
-    <div class="card shadow p-3 mb-5 bg-white rounded bounceIn">
+   <!-- <div class="card shadow p-3 mb-5 bg-white rounded bounceIn">
         <h3 class="text-center" style="font-weight: bold">Feacherd Locations</h3>
         <hr>
         <div class="card-body col-md-12 mx-auto">
@@ -34,10 +39,37 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <div class="card shadow p-3 mb-5 bg-white rounded bounceIn">
         <h3 class="text-center" style="font-weight: bold" id="aboutus">About Us</h3>
         <hr>
+        <div class="row justify-content-center">
+        <?php if ($count != null){
+            echo "
+            <div class=\"card shadow p-3 mb-5 bg-white rounded bounceIn\" style=\"width: 18rem;\">
+                <div class=\"card-body\">
+                    <h5 class=\"card-title text-center\">Traval Srilanka Number Of Content Creators</h5>
+                    <br><br>
+                    <h1 class=\"text-center\">$count</h1>
+                </div>
+            </div>";
+        }else{
+            echo "<h1>No Data Preview</h1>";
+        }?>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+            <?php if ($content != null){
+                echo " <div class=\"card shadow p-3 mb-5 bg-white rounded bounceIn\" style=\"width: 18rem;\">
+            <div class=\"card-body\">
+                <h5 class=\"card-title text-center\">Content Count This Time</h5>
+                 <br><br>
+                <h1 class=\"text-center\">$content</h1>
+              
+            </div>
+        </div>";
+            }else{
+                echo "<h1>No Data Preview</h1>";
+            }?>
+        </div>
     </div>
     <div class="card shadow p-3 mb-5 bg-white rounded bounceIn">
         <h3 class="text-center" style="font-weight: bold">Reports</h3>
@@ -170,6 +202,5 @@
         </section>
     </div>
 </div>
-
 <?php include 'partials/footerContent.php'?>
 <?php include  'partials/footer.php' ?>

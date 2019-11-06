@@ -1,1 +1,1 @@
-<a class="nav-link" href="<?php echo base_url('index.php/Login/userlogout');?>">Logout</a>
+<a class="nav-link" href="<?php echo base_url('index.php/Login/userlogout');?>"><i class="fa fa-sign-out"></i>&nbsp;Logout</a>
